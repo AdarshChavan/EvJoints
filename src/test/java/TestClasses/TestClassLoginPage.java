@@ -1,5 +1,7 @@
 package TestClasses;
 
+import java.io.IOException;
+
 import org.testng.annotations.Test;
 
 import PageObjects.Vendor;
@@ -9,7 +11,7 @@ public class TestClassLoginPage extends BaseTest{
 
 	
 	@Test(priority = 1)
-	public void LoginPageMethod() throws InterruptedException {
+	public void LoginPageMethod() throws InterruptedException, IOException {
 	
 		loginpage.clickOnLoginViaOtp();
 		loginpage.clickOnEnterEmailIdField();

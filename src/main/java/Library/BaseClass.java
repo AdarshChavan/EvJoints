@@ -1,5 +1,7 @@
 package Library;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -14,7 +16,7 @@ public class BaseClass extends UtilityClass{
 
 	public static WebDriver driver;
 
-	public void browser() throws InterruptedException {
+	public void browser() throws InterruptedException, IOException {
        
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
@@ -24,7 +26,7 @@ public class BaseClass extends UtilityClass{
 
 		driver = new ChromeDriver();
 		//driver.get("https://admin.evjoints.com/login");
-		driver.get(prop.getProperty("url"));
+		driver.get(UtilityClass.getDatafromPropertyFile("url"));
 		driver.manage().window().maximize();
 
 	}

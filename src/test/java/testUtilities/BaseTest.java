@@ -1,5 +1,7 @@
 package testUtilities;
 
+import java.io.IOException;
+
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 
@@ -14,7 +16,7 @@ import PageObjects.Vendor;
 public class BaseTest extends BaseClass {
 	
 	@BeforeSuite
-	public void InitializeBrowser() throws InterruptedException {
+	public void InitializeBrowser() throws InterruptedException, IOException {
 		
 		browser();
 	}

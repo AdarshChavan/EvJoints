@@ -1,9 +1,13 @@
 package PageObjects;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import Library.UtilityClass;
 
 
 public class Loginpage {
@@ -50,8 +54,8 @@ public class Loginpage {
 		
 	}
 	
-	public void clickOnEnterEmailIdField() {
-		enterEmailIdField.sendKeys("saffana.siddiqui@techstalwarts.com");
+	public void clickOnEnterEmailIdField() throws IOException {
+		enterEmailIdField.sendKeys(UtilityClass.getDatafromPropertyFile("MailId"));
 	
 	}
 	
